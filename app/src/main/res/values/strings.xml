@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">MyManga</string>
+    <array name="comic_images">
+        <item>@drawable/op_cover</item>
+        <item>@drawable/hxh_cover</item>
+        <item>@drawable/snk_cover</item>
+        <item>@drawable/kny_cover</item>
+        <item>@drawable/hitman_cover</item>
+        <item>@drawable/haikyuu_cover</item>
+        <item>@drawable/opm_cover</item>
+        <item>@drawable/bnha_cover</item>
+        <item>@drawable/kuroko_cover</item>
+        <item>@drawable/naruto_cover</item>
+    </array>
+
+    <array name="comic_wallpapers">
+        <item>@drawable/op_wallpaper</item>
+        <item>@drawable/hxh_wallpaper</item>
+        <item>@drawable/snk_wallpaper</item>
+        <item>@drawable/kny_wallpaper</item>
+        <item>@drawable/hitman_wallpaper</item>
+        <item>@drawable/haikyuu_wallpaper</item>
+        <item>@drawable/opm_wallpaper</item>
+        <item>@drawable/bnha_wallpaper</item>
+        <item>@drawable/kuroko_wallpaper</item>
+        <item>@drawable/naruto_wallpaper</item>
+    </array>
+</resources>

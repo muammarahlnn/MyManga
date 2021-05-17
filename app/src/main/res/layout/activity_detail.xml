@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    tools:context=".DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp">
+
+        <com.github.florent37.shapeofview.shapes.ArcView
+            android:id="@+id/av_detail_wallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_arc_cropDirection="outside"
+            app:shape_arc_height="25dp"
+            app:shape_arc_position="bottom">
+
+            <ImageView
+                android:id="@+id/iv_detail_wallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@color/blue_primary"/>
+
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+        <com.github.florent37.shapeofview.shapes.CircleView
+            android:id="@+id/cv_back_detail"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:elevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back_blue"
+                android:background="@color/white"/>
+
+        </com.github.florent37.shapeofview.shapes.CircleView>
+
+        <com.github.florent37.shapeofview.shapes.CircleView
+            android:id="@+id/cv_favorite_detail"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_favorite_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="@color/white"/>
+
+        </com.github.florent37.shapeofview.shapes.CircleView>
+
+        <Space
+            android:id="@+id/space1_detail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="64dp"
+
+            app:layout_constraintBottom_toBottomOf="@id/av_detail_wallpaper"
+            app:layout_constraintLeft_toLeftOf="@id/av_detail_wallpaper"
+            app:layout_constraintRight_toRightOf="@id/av_detail_wallpaper" />
+
+        <com.github.florent37.shapeofview.shapes.RoundRectView
+            android:id="@+id/rrv_detail_image"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="24dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/space1_detail"
+            app:shape_roundRect_borderColor="@color/blue_primary"
+            app:shape_roundRect_borderWidth="1dp"
+            app:shape_roundRect_bottomLeftRadius="10dp"
+
+            app:shape_roundRect_bottomRightRadius="10dp"
+            app:shape_roundRect_topLeftRadius="10dp"
+            app:shape_roundRect_topRightRadius="10dp">
+
+            <ImageView
+                android:id="@+id/iv_detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@color/white" />
+
+        </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+        <TextView
+            android:id="@+id/tv_detail_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="24dp"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="12dp"
+
+            android:background="@drawable/bg_layout_white"
+            android:fontFamily="@font/monsterrat_medium"
+            android:text="Title"
+            android:textAlignment="center"
+            android:textColor="@color/black_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="@id/rrv_detail_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rrv_detail_image"/>
+
+        <LinearLayout
+            android:id="@+id/ll_detail_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingVertical="24dp"
+            android:paddingHorizontal="12dp"
+
+            android:background="@drawable/bg_layout_white"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rrv_detail_image">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_detail_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/monsterrat_regular"
+                    android:text="Author's name"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+
+                    android:fontFamily="@font/monsterrat_light"
+                    android:text="Author"
+                    android:textColor="@color/black_primary"
+                    android:textSize="14sp"
+
+                    app:layout_constraintEnd_toEndOf="@+id/tv_detail_author"
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_author"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_author" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_detail_publisher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/monsterrat_regular"
+                    android:text="Publisher's name"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+
+                    android:fontFamily="@font/monsterrat_light"
+                    android:text="Publisher"
+                    android:textColor="@color/black_primary"
+                    android:textSize="14sp"
+
+                    app:layout_constraintEnd_toEndOf="@+id/tv_detail_publisher"
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_publisher"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_publisher" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_detail_synopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:paddingVertical="24dp"
+            android:paddingHorizontal="16dp"
+
+            android:background="@drawable/bg_layout_white"
+            android:fontFamily="@font/monsterrat_regular"
+            android:lineSpacingExtra="5dp"
+            android:text="Synopsis"
+            android:textColor="@color/black_primary"
+            android:textSize="15sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_detail_data" />
+
+        <Button
+            android:id="@+id/btn_home_detail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_btn_blue"
+
+            android:text="HOME"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:fontFamily="@font/monsterrat_medium"
+
+            android:layout_margin="24dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_synopsis" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
